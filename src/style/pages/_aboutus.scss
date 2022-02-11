@@ -1,0 +1,57 @@
+/* --------
+ Typography
+---------- */
+
+.aboutUs-body-text {
+  font-size: 2.8rem;
+  color: #e6e6e6;
+  line-height: 40px;
+  font-family: NanoTech;
+  padding: 0px 44px 0px 44px ;
+  max-height: 100%;
+  overflow-y: auto;
+  font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+  .aboutUs-body-text {
+    font-size: 2rem;
+  }
+}
+
+/* --------
+Body Area
+---------- */
+
+.aboutUs-body-text {
+  overflow-y: auto;
+}
+
+@media (max-width: 1000px) {
+  .aboutUs-body-text {
+    height: 68%;
+  }
+}
+
+.aboutUs__image {
+  margin-bottom: 30%;
+}
+
+.aboutUs-body__right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+  .aboutUs-body__right {
+    justify-content: flex-start;
+  }
+
+  .aboutUs__title {
+    :last-child {
+      margin-right: 30px;
+    }
+  }
+}

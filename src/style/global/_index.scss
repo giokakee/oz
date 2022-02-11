@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  scrollbar-width: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 1700px) {
+  html {
+    font-size: 43.5%;
+  }
+}
+
+@media only screen and (max-width: 400px) and (max-height: 600px) {
+  html {
+    font-size: 30.5%;
+  }
+}
+
+body {
+  background-color: #131c1b;
+  margin: 0;
+  overflow: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+// #fullPage {
+//   display: none;
+// }
+
+#fullPage {
+  // display: none;
+  transition-delay: 0.1s !important;
+}
+
+// .helper {
+//   position: fixed;
+//   height: 126px;
+//   border-top: 1px solid #bebcbc;
+//   border-bottom: 1px solid #bebcbc;
+//   z-index: 100;
+//   top: 0;
+//   width: 100%;
+// }
+
+#swipe {
+  font-family: RailGrotesk !important;
+}

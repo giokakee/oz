@@ -1,0 +1,164 @@
+/* -------- 
+ Typography
+---------- */
+
+.home-header__navigation {
+  align-items: center;
+  ul {
+    list-style-type: none;
+    align-items: center;
+    li {
+      a {
+        text-decoration: none;
+        color: #e6e6e6;
+        font-size: 28px;
+        font-family: RailGrotesk;
+      }
+    }
+  }
+}
+
+/* -------- 
+ Header Area  
+---------- */
+
+.home__header {
+  display: flex;
+  height: 126px;
+  border-top: 1px solid #bebcbc4d;
+  border-bottom: 1px solid #bebcbc4d;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  .home-header__logo {
+    margin-left: 74px;
+  }
+
+  .home-header__navigation {
+    ul {
+      display: flex;
+    }
+
+    img {
+      opacity: 0;
+    }
+
+    .nav-hover--right {
+      margin-right: 78px;
+    }
+
+    .nav-last-hover {
+      margin-right: 57px;
+    }
+  }
+}
+
+.home__menu {
+  display: none;
+}
+
+@media (min-width: 700px) {
+  .home__menu {
+    cursor: pointer;
+  }
+}
+
+/* -------- 
+ Body Area
+---------- */
+
+.home-small__img {
+  display: none;
+}
+
+.home__body {
+  display: flex;
+  height: calc(100% - 126px);
+  justify-content: center;
+  align-items: center;
+}
+
+/* -------- 
+ MEDIA
+---------- */
+
+@media (max-width: 1600px) {
+  .home-big__img {
+    width: 800px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .home__header {
+    .home-header__navigation {
+      .nav-hover--right {
+        margin-right: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1850px) {
+  .home-header__navigation {
+    ul {
+      li {
+        padding-top: 3px;
+        a {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .home__menu {
+    display: flex;
+    padding-right: 30px;
+  }
+  .home {
+    .home__header {
+      .home-header__navigation {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .home-big__img {
+    display: none;
+  }
+  .home-small__img {
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .home__header {
+    .home-header__logo {
+      margin-left: 30px;
+      img {
+        width: 130px;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .home-small__img {
+    width: 300px;
+  }
+}
+
+
+.home-hover, 
+.aboutUs-hover, 
+.services-hover, 
+.projects-hover, 
+.blogs-hover, 
+.careers-hover, 
+.customers-hover, 
+.contact-hover{
+  transition: 0.5s;
+}

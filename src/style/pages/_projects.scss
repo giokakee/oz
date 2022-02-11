@@ -1,0 +1,246 @@
+/* --------
+ Typography
+---------- */
+
+/* --------
+left Body Area
+---------- */
+
+.project-body__left {
+  position: relative;
+}
+
+.project__helicopter {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.project__img {
+  width: 677px;
+  height: 318px;
+}
+
+.project__helicopter {
+  width: 35%;
+}
+
+@media (max-width: 1200px) {
+  .project__helicopter {
+    display: none;
+  }
+}
+
+/* ---------
+  splide
+ ----------*/
+@mixin splide {
+  width: 100%;
+  height: 100%;
+  color: #e6e6e6;
+
+  h4 {
+    font-size: 2.8rem;
+    font-family: RailGrotesk;
+    margin: 0;
+    display: inline-block;
+    font-weight: 400;
+  }
+
+  span {
+    font-size: 2.8rem;
+    font-family: RailGrotesk;
+    font-weight: 400;
+  }
+
+  p {
+    font-family: RailGrotesk;
+    font-weight: 400;
+    font-size: 1.7rem;
+    font-weight: 400;
+    margin-top: 5vh;
+  }
+
+  .visit__website {
+    margin-top: 5vh;
+    white-space: nowrap;
+  }
+
+  .footer {
+    font-family: NanoTechItalic;
+    font-size: 1.7rem;
+    margin-top: 5vh;
+    font-weight: 400;
+  }
+
+  .index {
+    position: relative;
+    left: -50px;
+    top: 40px;
+    font-weight: 400;
+  }
+
+  .splide__track {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .splide__slide {
+    position: relative;
+    margin-left: 3.55%;
+  }
+}
+
+.swiper-wrapper {
+  @include splide;
+  margin-left: 20px;
+
+  li {
+    div {
+      max-width: 400px;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .project-body__right {
+    visibility: hidden;
+  }
+
+  .splideMobile {
+    display: block;
+  }
+
+  .splide {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .visit__website {
+    cursor: pointer;
+    a {
+      &:hover {
+        color: #19a79e;
+      }
+    }
+  }
+}
+
+.visit__website {
+  display: flex;
+
+  a {
+    margin-top: 5px;
+    font-size: 20px;
+    font-family: RailGrotesk;
+  }
+}
+
+#splide__listMobile {
+  .visit__website {
+    margin-top: 60px !important;
+  }
+}
+
+.projects__mobile--SVG {
+  z-index: 10;
+  position: absolute;
+  overflow: hidden;
+  display: none;
+  height: 100%;
+  width: 100vw;
+  background-color: #19a79d;
+}
+
+.projects__mobile--SVGG {
+  height: 100%;
+  width: 400px;
+}
+
+@media (max-width: 700px) {
+  .projects__mobile--SVG {
+    display: block;
+    position: absolute;
+  }
+
+  .projects__mobile--SVGG-swipe {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-left: 30px;
+    margin-bottom: 19px;
+  }
+
+  .index {
+    top: 30px !important;
+    left: -30px !important;
+  }
+
+  .swiper__mobile {
+    li {
+      div {
+        width: 70% !important;
+      }
+    }
+  }
+}
+
+.projects__mobie--SVGG {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.swiper-container {
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 20%;
+  align-items: center;
+}
+@media (max-width: 1200px) {
+  .swiper-slide {
+    justify-content: flex-start;
+  }
+}
+
+.swiper-mobile__container {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .swiper-mobile__container {
+    display: block;
+  }
+
+  .swiper__lg {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) and (max-height: 600px) {
+  .visit__website {
+    img {
+      height: 25px;
+    }
+    a {
+      font-size: 15px;
+    }
+  }
+}
+
+
+
+.rocket{
+  right: 0px;
+  bottom: 0px;
+  position: absolute;
+  color: #19a79d;
+  opacity: 30%;
+}

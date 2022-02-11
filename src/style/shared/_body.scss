@@ -1,0 +1,71 @@
+/* -------- 
+ BASIC
+---------- */
+
+/* -------- 
+ General Layouts
+---------- */
+.body {
+  height: calc(100% - 126px);
+  display: flex;
+}
+
+/* -------- 
+ Body Left Content
+---------- */
+.body__left--content {
+  justify-content: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 40%;
+  background-color: #19a79d;
+  overflow: hidden;
+}
+
+/* -------- 
+ Body Right Area
+---------- */
+.body__right--content {
+  width: 60%;
+  overflow: hidden;
+  height: 100%;
+}
+
+@media (max-width: 1200px) {
+  .body__left--content {
+    display: none;
+  }
+  .body__right--content {
+    width: 100%;
+  }
+}
+
+.body-title__mobile {
+  align-items: center;
+  margin-bottom: 0px;
+  padding: 0;
+  img {
+    width: 30px;
+    height: 47px;
+  }
+  h2 {
+    font-size: 42px;
+    font-family: RailGrotesk;
+    color: #e6e6e6;
+    margin-top: 37px;
+    font-weight: 600;
+  }
+}
+.body-title__mobile {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 1000px) {
+  .body-title__mobile {
+    img {
+      width: 30px;
+      height: 47px;
+    }
+  }
+}

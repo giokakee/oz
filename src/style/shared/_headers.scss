@@ -1,0 +1,142 @@
+/* -------- 
+ BASIC
+---------- */
+
+.header {
+  height: 126px;
+  border-top: 1px solid #bebcbc4d;
+  border-bottom: 1px solid #bebcbc4d;
+  width: 100%;
+}
+
+/* -------- 
+ Typography
+---------- */
+
+.header__title {
+  h2 {
+    font-size: 60px;
+    font-family: RailGrotesk;
+    color: #e6e6e6;
+    margin-bottom: 40px;
+  }
+}
+
+.header__menu {
+  cursor: pointer;
+  h2 {
+    font-size: 28px;
+    font-family: RailGrotesk;
+    color: #e6e6e6;
+  }
+}
+
+@media (max-width: 1600px) {
+  .header__menu {
+    img {
+      width: 13px;
+    }
+    h2 {
+      font-size: 22px;
+    }
+  }
+}
+
+/* -------- 
+ General Layouts
+---------- */
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header__right--content{
+  padding-left: 44px;
+}
+
+.header__right--content,
+.header__title,
+.header__menu {
+  display: flex;
+  touch-action: none;
+  // margin-left: 35%;
+}
+
+.header__title__project {
+  position: absolute;
+}
+
+.header__title__customers {
+  margin-left: 2%;
+}
+
+/* -------- 
+ Header Left Content
+---------- */
+
+.header__left--content {
+  width: 40%;
+
+  .header__logo {
+    margin-left: 74px;
+  }
+}
+
+/* -------- 
+ Header Right Area
+---------- */
+.header__right--content {
+  width: 60%;
+  height: 100%;
+
+  .header__title {
+    margin-right: 199px;
+    margin: 0 auto;
+    align-items: center;
+    h2 {
+      white-space: nowrap;
+      letter-spacing: 2px;
+      font-weight: 400;
+    }
+  }
+
+  .header__menu {
+    // margin-left: auto;
+    align-items: center;
+    margin-right: 76px;
+    position: absolute;
+    right: 0;
+    margin-top: 23px;
+  }
+}
+
+/* -------- 
+ Media 
+---------- */
+
+@media (max-width: 1000px) {
+  .header__title {
+    display: none;
+  }
+  .header__right--content {
+    justify-content: flex-end;
+  }
+}
+.header__title {
+  display: none;
+}
+@media (max-width: 700px) {
+  .header__left--content {
+    .header__logo {
+      margin-left: 30px;
+      width: 130px;
+    }
+  }
+
+  .header__right--content {
+    .header__menu {
+      margin-right: 30px;
+      cursor: auto;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@import "./shared/fonts";
+@import "./global/index";
+@import "./shared/headers";
+@import "./shared/body";
+@import "./pages/loading";
+@import "./pages/home";
+@import "./pages/aboutUs";
+@import "./pages/services";
+@import "./pages/projects";
+@import "./pages/customers";
+@import "./pages/contact";
+@import "./pages/sectionNavigation";
+@import "./pages/blogs"; 
+@import "./pages/careers"; 
+
+
+#fp-nav {
+  display: none !important;
+}

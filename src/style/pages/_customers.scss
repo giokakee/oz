@@ -1,0 +1,141 @@
+/* -------- 
+ Typography
+---------- */
+
+.customers__body {
+  overflow: hidden;
+
+  h3 {
+    white-space: nowrap;
+    color: #e6e6e6;
+    font-family: NanoTech;
+    font-weight: 400;
+    margin: 0;
+    font-size: 9rem;
+
+    a {
+      text-decoration: none;
+      color: #e6e6e6;
+    }
+    :hover {
+      color: #19a79e;
+      cursor: pointer;
+    }
+  }
+}
+/* -------- 
+ Layouts
+---------- */
+
+.customers__body {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 126px);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .customers__names {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: end;
+    h3 {
+      padding: 30px;
+    }
+    :last-child {
+      grid-column: 1/-1;
+      justify-self: center;
+    }
+  }
+}
+
+.customers__title {
+  :last-child {
+    margin-right: 60px;
+  }
+}
+
+/* -------- 
+ MEDIA
+---------- */
+
+.customers-title__mobile {
+  justify-content: center;
+  height: 60px;
+  margin-top: 30px;
+}
+
+@media (max-width: 1400px) {
+  .customers__names {
+    h3 {
+      font-size: 8rem;
+    }
+  }
+}
+@media (max-width: 1100px) {
+  .customers__names {
+    h3 {
+      font-size: 6rem;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .customers__names {
+    h3 {
+      font-size: 5rem;
+    }
+  }
+}
+
+.customers__mobile {
+  display: none;
+}
+@media (max-width: 700px) {
+  .customers__body {
+    justify-content: flex-start;
+    .customers__names {
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: end;
+      // :first-child {
+      //   margin-top: 5px;
+      // }
+      h3 {
+        font-size: 2.8rem;
+        padding: 30px;
+        white-space: normal;
+        display: flex;
+        justify-content: space-around;
+
+        a {
+          width: 100px;
+        }
+      }
+      .intranote {
+        grid-column: 2/-1;
+      }
+      :last-child {
+        grid-column: 1/1;
+        grid-row: 5/6;
+      }
+    }
+  }
+}
+
+@media (max-height: 620px) {
+  .customers__body {
+    .customers__names {
+      h3 {
+        padding-top: 7px !important;
+      }
+    }
+  }
+}
+
+@media (min-width: 400px) and (max-width: 700px) {
+  .customers__names {
+    h3 {
+      margin-right: 20px;
+    }
+  }
+}
