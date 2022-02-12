@@ -315,14 +315,14 @@ const sendResume = () => {
     btn.addEventListener('click', () => {
       mailInputs.forEach(input => {
         if(input.parentElement.nextElementSibling === btn.parentElement.parentElement){
-          let file = input.parentElement.previousElementSibling.files
+          let file = input.parentElement.previousElementSibling.children[0].children[0].files
           let mail = input.value
 
           if(file.length && mail){
-            let user = {
+            let resume = {
               file,mail
             }
-              console.log(user, '  ', ' resume sentt')
+              console.log(resume, '  ', 'this should be resume ')
           }else{
             console.log('here should be error message')
           }
