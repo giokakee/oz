@@ -58,11 +58,12 @@
   }
 }
 .body-title__mobile {
-  display: flex;
+  display: none;
   justify-content: center;
 }
 @media (max-width: 1000px) {
   .body-title__mobile {
+    display: flex;
     img {
       width: 30px;
       height: 47px;

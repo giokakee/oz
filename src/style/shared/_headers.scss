@@ -91,7 +91,6 @@
 
   .header__title {
     margin-right: 199px;
-    margin: 0 auto;
     align-items: center;
     h2 {
       white-space: nowrap;
@@ -121,9 +120,9 @@
   .header__right--content {
     justify-content: space-between;
   }
-}
-.header__title {
-  display: none;
+  .header__title {
+    display: none;
+  }
 }
 @media (max-width: 700px) {
   .header__left--content {
