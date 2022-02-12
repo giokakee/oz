@@ -1,0 +1,16 @@
+
+
+         <svg class="services__mobile--SVGG-swipe" xmlns="http://www.w3.org/2000/svg" width="99" height="30"
+          viewBox="0 0 99 30">
+          <g id="Group_1258" data-name="Group 1258" transform="translate(-300 -2732)">
+            <g id="ic_arrow_forward_24px" transform="translate(379 2737)">
+              <g id="Group_1257" data-name="Group 1257">
+                <path id="Path_892" data-name="Path 892" d="M12,4,10.59,5.41,16.17,11H4v2H16.17l-5.58,5.59L12,20l8-8Z"
+                  fill="#111" />
+              </g>
+            </g>
+            <text id="Swipe" transform="translate(300 2755)" font-size="24" font-family="NanotechLLC, Nanotech LLC">
+              <tspan x="0" y="0">Swipe</tspan>
+            </text>
+          </g>
+        </svg>
