@@ -223,7 +223,7 @@ label.label input[type="file"] {
 
 
 
-@media (max-width: 750px) {
+@media (max-width: 1000px) {
   .careersArea{
     display: grid;
     justify-content: center;
@@ -231,6 +231,7 @@ label.label input[type="file"] {
   }
   .careerDiv{
     align-items: center;
+    padding: 15px 0px 10% 0px
   }
 
   .resumeDiv{
@@ -242,3 +243,9 @@ label.label input[type="file"] {
   }
 
 }
+
+
+
+
+
+
