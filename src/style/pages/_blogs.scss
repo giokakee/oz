@@ -160,6 +160,16 @@
 
 
 
+
+@media (max-width: 750px) {
+  .blogsArea{
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+  }
+}
+
+
   
 
 

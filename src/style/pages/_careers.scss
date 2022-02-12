@@ -206,7 +206,7 @@ label.label input[type="file"] {
   margin-bottom: 5px;
   background: #131c1b;
   display: inline-block;
-  transition: 0.3s ease;
+  transition: 0.3s ;
 }
 .label:hover {
   background: #19a79d;
@@ -219,4 +219,26 @@ label.label input[type="file"] {
 }
 .label:valid + span {
   color: #ffffff;
+}
+
+
+
+@media (max-width: 750px) {
+  .careersArea{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100%;
+  }
+  .careerDiv{
+    align-items: center;
+  }
+
+  .resumeDiv{
+    align-items: center;
+  }
+  .fileDiv{
+    margin-right: 10%;
+    margin-bottom: 17px;
+  }
+
 }
