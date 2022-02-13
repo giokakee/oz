@@ -225,7 +225,7 @@ function scrollThing(container) {
 scrollThing(aboutUsDiv);
 scrollThing(servicesDiv);
 scrollThing(blogsArea);
-scrollThing(careersArea)
+scrollThing(careersArea);
 
 /* --------
  clear website url before refresh
@@ -282,65 +282,45 @@ Careers
 
 let careerDiv = document.querySelectorAll('.careerDiv')
 
-
-
-const showResumeInputs = () => {
-
-let careerBtn = document.querySelectorAll('.careerBtn')
-careerBtn.forEach(btn => {
-  btn.addEventListener('click', () => {
-    btn.parentElement.parentElement.parentElement.nextElementSibling.classList.remove('nonDisplay')
-    btn.parentElement.parentElement.parentElement.classList.toggle('nonDisplay')
-      console.log('zimbabue')
-    })
+careerDiv.forEach(element => {
+  let careerBtn = element.querySelector('.careerBtn');
+  let listDiv = element.querySelector('.listDiv');
+  let resumeDiv = element.querySelector('.resumeDiv');
+  let backBtn = element.querySelector('.backButton');
+  let sendBtn = element.querySelector('.sendResumeBtn');
+  
+  careerBtn.addEventListener('click', () => {
+    listDiv.classList.toggle("nonDisplay")
+    resumeDiv.classList.remove("nonDisplay")
   })
-}
-
-
-
-const showCareerList = () => {
-  let backButton = document.querySelectorAll('.backButton')
-  backButton.forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.parentElement.parentElement.parentElement.previousElementSibling.classList.remove('nonDisplay')
-      btn.parentElement.parentElement.parentElement.classList.toggle('nonDisplay')
-    })
+  
+  backBtn.addEventListener('click', () => {
+    listDiv.classList.remove("nonDisplay")
+    resumeDiv.classList.toggle("nonDisplay")
   })
-}
+  
+  
+  
+  //Sending resume
+  sendBtn.addEventListener('click', () => {
+    let file = element.querySelector('.file').files;
+    let title = element.querySelector('.title').innerHTML;
+    let mail = element.querySelector('.mailInput').value;
 
-const sendResume = () => {
-  let sendResumeBtn = document.querySelectorAll('.sendResumeBtn')
-  let mailInputs = document.querySelectorAll('.mailInput')
-  sendResumeBtn.forEach(btn => {
-    btn.addEventListener('click', () => {
-      mailInputs.forEach(input => {
-        if(input.parentElement.nextElementSibling === btn.parentElement.parentElement){
-          let file = input.parentElement.previousElementSibling.children[0].children[0].files
-          let mail = input.value
+    
+    if(mail && file){
+      listDiv.classList.remove("nonDisplay")
+      resumeDiv.classList.toggle("nonDisplay")
+      let userInfo = {
+        file, title, mail
+      }
+      console.log(userInfo)
+    }else{
+      console.log('here should be error message')
 
-          if(file.length && mail){
-            let resume = {
-              file,mail
-            }
-              console.log(resume, '  ', 'this should be resume ')
-          }else{
-            console.log('here should be error message')
-          }
-
-        }
-      })
-    })
+    }
   })
-}
 
-
-showResumeInputs();
-showCareerList();
-sendResume()
-
-
-
-
-
+})
 
 

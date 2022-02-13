@@ -143,7 +143,7 @@ let sectionAnimation = () => {
     careers
       .from(".careersLeftSvg1", {duration: 1.3, x: -700})
       .from(".careersLeftSvg2", {duration: 1.9, y: 500, opacity:0 , ease: "elastic.out(1, 0.3)"})
-      .from(".careerDiv", {stagger: 0.5 ,duration: 0.7, y: 377, opacity:0 }, ">")
+      .from(".careerDiv", {stagger: 0.3 ,duration: 0.7, y: 377, opacity:0 }, "<")
 
   
     careers.pause();
