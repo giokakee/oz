@@ -312,7 +312,8 @@ careerDiv.forEach(element => {
       listDiv.classList.remove("nonDisplay")
       resumeDiv.classList.toggle("nonDisplay")
       let userInfo = {
-        file, title, mail
+        file, title, mail,
+        value: element.querySelector('.file').value
       }
       message.classList.remove("nonDisplay")
       setTimeout(() => {

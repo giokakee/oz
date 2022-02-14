@@ -31,6 +31,16 @@
   }
 }
 
+@media (max-width: 1200px) {
+ .header__title{
+   position: absolute;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+   left: 0px;
+ }
+}
+
 @media (max-width: 1600px) {
   .header__menu {
     img {
