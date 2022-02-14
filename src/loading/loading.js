@@ -306,7 +306,7 @@ careerDiv.forEach(element => {
     let file = element.querySelector('.file').files;
     let title = element.querySelector('.title').innerHTML;
     let mail = element.querySelector('.mailInput').value;
-
+    let message = element.querySelector(".message");
     
     if(mail && file){
       listDiv.classList.remove("nonDisplay")
@@ -314,6 +314,11 @@ careerDiv.forEach(element => {
       let userInfo = {
         file, title, mail
       }
+      message.classList.remove("nonDisplay")
+      setTimeout(() => {
+        message.classList.add("nonDisplay")
+      }, 3000)
+      element.querySelector('.mailInput').value = ""
       console.log(userInfo)
     }else{
       console.log('here should be error message')
