@@ -2,6 +2,8 @@
  Typography
 ---------- */
 
+
+
 .customers__body {
   overflow: hidden;
 
@@ -52,6 +54,12 @@
 /* -------- 
  MEDIA
 ---------- */
+
+.header__title__customers{
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;}
 
 .customers-title__mobile {
   justify-content: center;
