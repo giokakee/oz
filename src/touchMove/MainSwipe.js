@@ -30,9 +30,7 @@ serviceCover.addEventListener("touchmove", () => {
   userHasScrolled = true;
 });
 
-blogsArea.addEventListener("touchmove", () => {
-  userHasScrolled = true;
-});
+
 
 // serviceCover2.addEventListener('touchmove', () => {
 //     userHasScrolled = true
@@ -200,4 +198,17 @@ function handleTouchMove3(evt) {
   /* reset values */
   xDown = null;
   yDown = null;
+}
+
+
+
+$(blogsArea.body).on('touchmove', onScroll); // for mobile
+
+// callback
+function onScroll(){ 
+  console.log('zimbabue')
+    if( $(window).scrollTop() + window.innerHeight >= document.body.scrollHeight ) { 
+        track_page++; 
+        load_contents(track_page); 
+    }
 }
