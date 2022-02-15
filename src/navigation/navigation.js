@@ -1,4 +1,4 @@
-import { scroll } from "../gsap/index";
+import { scroll, sectAnim } from "../gsap/index";
 
 
 function navHover(element, hoverElement) {

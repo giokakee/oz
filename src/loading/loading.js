@@ -209,6 +209,7 @@ let blogsArea = document.querySelector(".blogsArea");
 let careersArea = document.querySelector(".careersArea");
 
 function scrollThing(container) {
+  console.log(container)
   container.addEventListener("wheel", () => {
     let aboutUsScroll = container.scrollHeight - 25 > container.clientHeight;
     if (aboutUsScroll) {
@@ -219,6 +220,7 @@ function scrollThing(container) {
   }, false);
 
   container.addEventListener("mouseleave", () => {
+    console.log('now leaved')
     $.fn.fullpage.setAllowScrolling(true);
   });
 }
