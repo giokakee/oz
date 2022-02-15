@@ -249,7 +249,7 @@ jQuery.event.special.touchstart = {
 
 
 /* --------
- for "read more" inside blogs
+ for "read more" blogs
 ---------- */
 let blogs = document.querySelectorAll('.blogDiv');
 let buttons = document.querySelectorAll('.blogBtn');

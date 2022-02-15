@@ -32,6 +32,7 @@ serviceCover.addEventListener("touchmove", () => {
 
 
 
+
 // serviceCover2.addEventListener('touchmove', () => {
 //     userHasScrolled = true
 // })
@@ -42,7 +43,6 @@ serviceCover.addEventListener("touchmove", () => {
 
 // document.addEventListener('touchstart', handleTouchStart, false);
 // document.addEventListener('touchmove', handleTouchMove, false);
-let blogsArea = document.querySelector('.blogsArea')
 
 serviceCover.addEventListener("touchstart", handleTouchStart, { capture: true });
 serviceCover.addEventListener("touchmove", handleTouchMove, { capture: true });
@@ -51,8 +51,6 @@ projectCover.addEventListener("touchstart", handleTouchStart3, { capture: true }
 projectCover.addEventListener("touchmove", handleTouchMove3, { capture: true });
 
 
-blogsArea.addEventListener("touchstart", handleTouchStart3, { capture: true });
-blogsArea.addEventListener("touchmove", handleTouchMove3, { capture: true });
 
 contactCover.addEventListener("touchstart", handleTouchStart2, { capture: true });
 contactCover.addEventListener("touchmove", handleTouchMove2, { capture: true });
@@ -202,13 +200,19 @@ function handleTouchMove3(evt) {
 
 
 
-$(blogsArea.body).on('touchmove', onScroll); // for mobile
+let blogsArea = document.querySelector('.blogsArea')
+let careersArea = document.querySelector('.careersArea')
 
-// callback
-function onScroll(){ 
-  console.log('zimbabue')
-    if( $(window).scrollTop() + window.innerHeight >= document.body.scrollHeight ) { 
-        track_page++; 
-        load_contents(track_page); 
-    }
-}
+blogsArea.addEventListener('touchmove', () => {
+  $.fn.fullpage.setAllowScrolling(false);
+})
+blogsArea.addEventListener('touchend', () =>{
+  $.fn.fullpage.setAllowScrolling(true);
+})
+
+careersArea.addEventListener('touchmove', () => {
+  $.fn.fullpage.setAllowScrolling(false);
+})
+careersArea.addEventListener('touchend', () =>{
+  $.fn.fullpage.setAllowScrolling(true);
+})
