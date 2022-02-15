@@ -154,7 +154,7 @@ new Swiper(".swiper-mobile__container", {
 // init full page js, and resume animations
 $("#fullPage").fullpage({
   scrollingSpeed: config.scrollSpeed,
-  normalScrollElements: ".aboutUs-body-text, .services-body__right, .swiper-mobile__container, .section__navigation",
+  normalScrollElements: ".aboutUs-body-text, .services-body__right, .swiper-mobile__container, .section__navigation .blogsArea .careersArea",
 
   afterLoad: function (anchorLink, index) {
     let loadedSection = $(this);
