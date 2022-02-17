@@ -287,9 +287,14 @@ careerDiv.forEach(element => {
   let dragInput = element.querySelector('.dragInput')
   let dragFileHere = element.querySelector('.dragFileHere');
   let fileDiv = element.querySelector('.fileDiv')
+  let forOpacity = element.querySelector('.forOpacity')
+
+
   careerBtn.addEventListener('click', () => {
     listDiv.classList.toggle("nonDisplay")
     resumeDiv.classList.remove("nonDisplay")
+
+    forOpacity.style.display = "none"
   })
   
   backBtn.addEventListener('click', () => {
@@ -297,8 +302,12 @@ careerDiv.forEach(element => {
     resumeDiv.classList.toggle("nonDisplay")
 
     dragFileHere.innerHTML = "Drag file here"
+    dragFileHere.style.color = "white"
     dragInput.value = null
     fileDiv.style.border = '2px dashed #ffffff'
+    fileDiv.style.backgroundColor = "#131c1b"
+    forOpacity.style.display = "block"
+    forOpacity.style.opacity = '0'
 
   })
 
@@ -317,6 +326,7 @@ careerDiv.forEach(element => {
     if(mail && file.files.length){
       listDiv.classList.remove("nonDisplay")
       resumeDiv.classList.toggle("nonDisplay")
+      
       let userInfo = {
         title, 
         mail,
@@ -327,8 +337,12 @@ careerDiv.forEach(element => {
       console.log(userInfo)
   
       dragFileHere.innerHTML = "Drag file here"
+      dragFileHere.style.color = "white"
       dragInput.value = null
       fileDiv.style.border = '2px dashed #ffffff'
+      forOpacity.style.opacity = '0'
+      fileDiv.style.backgroundColor = "#131c1b"
+
      
      
       message.classList.remove("nonDisplay")
@@ -353,6 +367,8 @@ careerDiv.forEach(element => {
   let resumeDiv = element.querySelector('.resumeDiv');
   let dragFileHere = element.querySelector('.dragFileHere');
   let fileDiv = element.querySelector('.fileDiv')
+  let forOpacity = element.querySelector('.forOpacity')
+
 
   dragInput.addEventListener('change', (e) => {
     e.preventDefault()
@@ -363,6 +379,32 @@ careerDiv.forEach(element => {
     dragFileHere.innerHTML = fileName
 
     fileDiv.style.border = '1px solid'
+    forOpacity.style.opacity = '0'
+    fileDiv.style.backgroundColor  = '#48bfae'
+    dragFileHere.style.color = 'black'
   })
+
+
+  let dragInputDiv  = element.querySelector('.dragInputDiv')
+  dragInputDiv.addEventListener('dragover', () => {
+    forOpacity.style.opacity = '0.7'
+    fileDiv.style.backgroundColor = "#48bfae"
+    dragFileHere.style.color = 'black'
+
+  })
+  dragInputDiv.addEventListener('dragleave', () => {
+    forOpacity.style.opacity = '0'
+
+    fileDiv.style.backgroundColor = "#131c1b"
+    dragFileHere.style.color = 'white'
+
+  })
+
+  dragInputDiv.addEventListener('drop', () => {
+    forOpacity.style.opacity = '0'
+    forOpacity.style.display = "none"
+  })
+
+
 })
 

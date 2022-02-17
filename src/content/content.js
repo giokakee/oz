@@ -378,8 +378,10 @@ careersData.forEach(career => {
   dragInput.classList.add('dragInput')
   dragInputDiv.appendChild(dragInput)
 
+  let forOpacity = document.createElement('div')
+  forOpacity.classList.add('forOpacity')
 
-
+  careerDiv.appendChild(forOpacity)
   careerDiv.appendChild(dragInputDiv)
   careerDiv.appendChild(messageDiv)
   careerDiv.appendChild(listDiv)
