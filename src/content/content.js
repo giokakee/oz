@@ -293,22 +293,17 @@ careersData.forEach(career => {
   resumeDiv.classList.add('resumeDiv')
   resumeDiv.classList.add('nonDisplay')
 
+
         let fileDiv = document.createElement('div')
         fileDiv.classList.add('fileDiv')
+            let dragFileHere = document.createElement('p')
+            dragFileHere.classList.add('dragFileHere')
+            dragFileHere.innerHTML = "Drag file here"
 
-            let label = document.createElement('label')
-            label.classList.add('label')
 
-            let fileInput = document.createElement('input')
-            fileInput.type = 'file'
-            fileInput.classList.add('file')
-            let inputSpan = document.createElement('span')
-              inputSpan.innerHTML = 'Select a file'
+                 fileDiv.appendChild(dragFileHere)
+          
 
-              label.appendChild(fileInput)
-              label.appendChild(inputSpan)
-
-              fileDiv.appendChild(label)
 
         let mailDiv = document.createElement('div')
         mailDiv.classList.add('mailDiv')
@@ -363,21 +358,29 @@ careersData.forEach(career => {
                             backBtnDiv.appendChild(backBtn)
                             backBtnDiv.appendChild(buttonRightBracket2)
 
+                            buttonParent.appendChild(sendButtonDiv)
+                            buttonParent.appendChild(backBtnDiv)
 
 
 
-            buttonParent.appendChild(sendButtonDiv)
-            buttonParent.appendChild(backBtnDiv)
-
-  resumeDiv.appendChild(fileDiv)
-  resumeDiv.appendChild(mailDiv)
-  resumeDiv.appendChild(buttonParent)
+        resumeDiv.appendChild(fileDiv)
+        resumeDiv.appendChild(mailDiv)
+        resumeDiv.appendChild(buttonParent)
   
   let careerDiv = document.createElement('div')
   careerDiv.classList.add('careerDiv')
 
+  let dragInputDiv = document.createElement('div')
+  dragInputDiv.classList.add('dragInputDiv')
+  
+  let dragInput = document.createElement('input')
+  dragInput.type = 'file'
+  dragInput.classList.add('dragInput')
+  dragInputDiv.appendChild(dragInput)
 
 
+
+  careerDiv.appendChild(dragInputDiv)
   careerDiv.appendChild(messageDiv)
   careerDiv.appendChild(listDiv)
   careerDiv.appendChild(resumeDiv)

@@ -284,7 +284,9 @@ careerDiv.forEach(element => {
   let resumeDiv = element.querySelector('.resumeDiv');
   let backBtn = element.querySelector('.backButton');
   let sendBtn = element.querySelector('.sendResumeBtn');
-  
+  let dragInput = element.querySelector('.dragInput')
+  let dragFileHere = element.querySelector('.dragFileHere');
+  let fileDiv = element.querySelector('.fileDiv')
   careerBtn.addEventListener('click', () => {
     listDiv.classList.toggle("nonDisplay")
     resumeDiv.classList.remove("nonDisplay")
@@ -293,30 +295,47 @@ careerDiv.forEach(element => {
   backBtn.addEventListener('click', () => {
     listDiv.classList.remove("nonDisplay")
     resumeDiv.classList.toggle("nonDisplay")
+
+    dragFileHere.innerHTML = "Drag file here"
+    dragInput.value = null
+    fileDiv.style.border = '2px dashed #ffffff'
+
   })
-  
-  
+
+
+
   
   //Sending resume
   sendBtn.addEventListener('click', () => {
-    let file = element.querySelector('.file').files;
+    let file = element.querySelector('.dragInput');
     let title = element.querySelector('.title').innerHTML;
     let mail = element.querySelector('.mailInput').value;
     let message = element.querySelector(".message");
+
+
     
-    if(mail && file){
+    if(mail && file.files.length){
       listDiv.classList.remove("nonDisplay")
       resumeDiv.classList.toggle("nonDisplay")
       let userInfo = {
-        file, title, mail,
-        value: element.querySelector('.file').value
+        title, 
+        mail,
+        file: file.files,
+        value: element.querySelector('.dragInput').value
       }
+      
+      console.log(userInfo)
+  
+      dragFileHere.innerHTML = "Drag file here"
+      dragInput.value = null
+      fileDiv.style.border = '2px dashed #ffffff'
+     
+     
       message.classList.remove("nonDisplay")
       setTimeout(() => {
         message.classList.add("nonDisplay")
       }, 3000)
       element.querySelector('.mailInput').value = ""
-      console.log(userInfo)
     }else{
       console.log('here should be error message')
 
@@ -325,4 +344,25 @@ careerDiv.forEach(element => {
 
 })
 
+
+
+
+careerDiv.forEach(element => {
+  let dragInput = element.querySelector('.dragInput');
+  let listDiv = element.querySelector('.listDiv');
+  let resumeDiv = element.querySelector('.resumeDiv');
+  let dragFileHere = element.querySelector('.dragFileHere');
+  let fileDiv = element.querySelector('.fileDiv')
+
+  dragInput.addEventListener('change', (e) => {
+    e.preventDefault()
+    listDiv.classList.add("nonDisplay")
+    resumeDiv.classList.remove("nonDisplay")
+
+    let fileName = dragInput.files[0].name
+    dragFileHere.innerHTML = fileName
+
+    fileDiv.style.border = '1px solid'
+  })
+})
 
