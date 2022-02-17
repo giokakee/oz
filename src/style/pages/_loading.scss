@@ -38,49 +38,49 @@
   position: absolute;
   top: 1.5rem;
   left: -1.6rem;
-  -webkit-animation: moveLogo 8s ease-in-out forwards;
-  animation: moveLogo 8s ease-in-out forwards;
+  -webkit-animation: moveLogo 4.5s ease-in-out forwards;
+  animation: moveLogo 4.5s ease-in-out forwards;
 }
 
 .loading__logo-left {
-  -webkit-animation: moveLogo1 8s ease-in-out forwards;
-  animation: moveLogo1 8s ease-in-out forwards;
+  -webkit-animation: moveLogo1 4.5s ease-in-out forwards;
+  animation: moveLogo1 4.5s ease-in-out forwards;
 }
 
 .loading__ozorix1 {
   opacity: 0;
-  -webkit-animation: ozorix1 5.2s forwards;
-  animation: ozorix1 5.2s forwards;
+  -webkit-animation: ozorix1 2.2s forwards;
+  animation: ozorix1 2.2s forwards;
 }
 
 .loading__ozorix2 {
   opacity: 0;
-  -webkit-animation: ozorix1 5.7s forwards;
-  animation: ozorix1 5.7s forwards;
+  -webkit-animation: ozorix1 2.7s forwards;
+  animation: ozorix1 2.7s forwards;
 }
 
 .loading__ozorix3 {
   opacity: 0;
-  -webkit-animation: ozorix1 6.2s forwards;
-  animation: ozorix1 6.2s forwards;
+  -webkit-animation: ozorix1 3.2s forwards;
+  animation: ozorix1 3.2s forwards;
 }
 
 .loading__ozorix4 {
   opacity: 0;
-  -webkit-animation: ozorix1 6.7s forwards;
-  animation: ozorix1 6.7s forwards;
+  -webkit-animation: ozorix1 3.7s forwards;
+  animation: ozorix1 3.7s forwards;
 }
 
 .loading__ozorix5 {
   opacity: 0;
-  -webkit-animation: ozorix1 7.2s forwards;
-  animation: ozorix1 7.2s forwards;
+  -webkit-animation: ozorix1 4.2s forwards;
+  animation: ozorix1 4.2s forwards;
 }
 
 .loading__ozorix6 {
   opacity: 0;
-  -webkit-animation: ozorix1 7.7s forwards;
-  animation: ozorix1 7.7s forwards;
+  -webkit-animation: ozorix1 4.7s forwards;
+  animation: ozorix1 4.7s forwards;
 }
 
 @-webkit-keyframes ozorix1 {
@@ -115,8 +115,8 @@
   position: absolute;
   top: 50px;
   left: 40px;
-  -webkit-animation: moveOzorix 4s ease-in-out forwards, fadeOzorix 8s ease-in-out forwards;
-  animation: moveOzorix 4s ease-in-out forwards, fadeOzorix 8s ease-in-out forwards;
+  -webkit-animation: moveOzorix 2s ease-in-out forwards, fadeOzorix 4s ease-in-out forwards;
+  animation: moveOzorix 2.7s ease-in-out forwards, fadeOzorix 4s ease-in-out forwards;
 }
 
 @-webkit-keyframes fadeOzorix {

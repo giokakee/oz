@@ -41,10 +41,62 @@ export let config = {
     instagram: "#"
   },
 
-  blogText: [
+  blogData: [
     {
-      title: 'Lorem ipsum',
+      title: 'Lorem ipsum 1',
+      text: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis excepturi perspiciatis laborum, veniam nam earum debitis eius delectus impedit voluptatem. Ratione totam pariatur veritatis quasi officia? Rerum, architecto? Quisquam qui molestiae cupiditate assumenda totam doloribus repudiandae, minima ab`,
+      moreText: ` Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+      Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
+      nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
+      tristique senectus et netus et. Duis convallis convallis tellus id 
+      interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
+      non arcu. Lacus vestibulum sed arcu`
+    },
+    {
+      title: 'Lorem ipsum 2',
       text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
+             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
+             tristique senectus et netus et. Duis convallis convallis tellus id 
+             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
+             non arcu. Lacus vestibulum sed arcu`,
+      moreText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
+             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
+             tristique senectus et netus et. Duis convallis convallis tellus id 
+             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
+             non arcu. Lacus vestibulum sed arcu`
+    },
+    {
+      title: 'Lorem ipsum 3',
+      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
+             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
+             tristique senectus et netus et. Duis convallis convallis tellus id 
+             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
+             non arcu. Lacus vestibulum sed arcu`,
+      moreText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
+             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
+             tristique senectus et netus et. Duis convallis convallis tellus id 
+             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
+             non arcu. Lacus vestibulum sed arcu`
+    },
+    {
+      title: 'Lorem ipsum4',
+      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
+             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
+             tristique senectus et netus et. Duis convallis convallis tellus id 
+             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
+             non arcu. Lacus vestibulum sed arcu`,
+      moreText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
              Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
              nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
@@ -60,11 +112,8 @@ export let config = {
              nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
              tristique senectus et netus et. Duis convallis convallis tellus id 
              interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
-             non arcu. Lacus vestibulum sed arcu`
-    },
-    {
-      title: 'Lorem ipsum',
-      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+             non arcu. Lacus vestibulum sed arcu`,
+      moreText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
              Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
              nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
@@ -80,27 +129,36 @@ export let config = {
              nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
              tristique senectus et netus et. Duis convallis convallis tellus id 
              interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
-             non arcu. Lacus vestibulum sed arcu`
-    },
-    {
-      title: 'Lorem ipsum',
-      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+             non arcu. Lacus vestibulum sed arcu`,
+      moreText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
              Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
              nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
              tristique senectus et netus et. Duis convallis convallis tellus id 
              interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
              non arcu. Lacus vestibulum sed arcu`
+    }
+  ],
+
+  careersData: [
+    {
+      title: "UX Designer react",
+      list: `<li>5 year experience +</li>
+             <li>Native English</li>
+             <li>Software: Sketch, Figma</li>
+             <li>adobe Xd</li>`
     },
     {
-      title: 'Lorem ipsum',
-      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
-             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
-             tristique senectus et netus et. Duis convallis convallis tellus id 
-             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
-             non arcu. Lacus vestibulum sed arcu`
+      title: "UX Designer angular",
+      list: `<li>5 year experience +</li>
+             <li>Native English</li>
+             <li>Software: Sketch, Figma</li>`
+    },
+    {
+      title: "UX Designer ",
+      list: `<li>5 year experience +</li>
+             <li>Native English</li>
+             <li>Software: Sketch, Figma</li>`
     }
   ],
 
@@ -271,12 +329,14 @@ export let config = {
       <br> based/mobile business solutions;</li>
       </br>  <li>On platforms: NET, NodeJS,
       Java/Scala/Grails.</li>`,
-    "services-2-2__title": "GIS Systems",
 
+
+    "services-2-2__title": "GIS Systems",
     "services-2-2__ul": `
       <li style="margin-top:55px;">Design and development of GIS
       <br> backend and frontend solutions;</li>
       <li>On platforms: OpenLayers, Leaflet.</li>`,
+
 
     "services-2-3__title": "GIS Systems",
     "services-2-3__ul": `

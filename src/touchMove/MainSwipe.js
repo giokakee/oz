@@ -200,6 +200,8 @@ function handleTouchMove3(evt) {
 
 
 
+// for blogs and careers touchscroll
+
 let blogsArea = document.querySelector('.blogsArea')
 let careersArea = document.querySelector('.careersArea')
 

@@ -64,6 +64,8 @@
     line-height: 24px;
     font-weight:100;
   }
+
+  
   
   @media (max-width: 1200px) {
     .blog {
@@ -108,9 +110,6 @@
 
   .moreText{
     display: none;
-    transform:rotate3d(2);
-    transition-duration: 1s;
-    transition-timing-function: ease-in;
 }
 
 

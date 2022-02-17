@@ -165,4 +165,224 @@ document.querySelector(".instagram").setAttribute("href", config.socialLinks.ins
 
 
 
+
+
+
+
+//blogs area
+
 let blogsArea = document.querySelector(".blogsArea")
+let {blogData} = config
+
+
+blogData.forEach(blogData => {
+  let blogsDiv = document.createElement('div');
+  blogsDiv.classList.add('blogDiv');
+  
+  let title = document.createElement('p')
+  title.classList.add('title')
+  title.innerHTML = blogData.title
+
+  let blog = document.createElement('p')
+  blog.classList.add('blog')
+  blog.innerHTML= blogData.text
+
+  let dots = document.createElement('span')
+  dots.classList.add('dots')
+  dots.innerHTML = '...'
+  blog.appendChild(dots)
+
+  let moreText = document.createElement('span')
+  moreText.classList.add('moreText')
+  moreText.innerHTML = blogData.moreText
+  blog.appendChild(moreText)
+
+  let buttonDiv = document.createElement('div')
+  buttonDiv.classList.add('buttonDiv')
+
+
+  let leftBracket = document.createElement('img')
+  leftBracket.classList.add('buttonLeftBracket')
+  leftBracket.src = "./assets/shared/buttonBracketLeft.svg"
+
+  let blogBtn = document.createElement('button')
+  blogBtn.classList.add('blogBtn')
+  blogBtn.innerHTML = 'Read more'
+
+  let rightBracket = document.createElement('img')
+  rightBracket.classList.add('buttonRightBracket')
+  rightBracket.src = "./assets/shared/buttonBracketRight.svg"
+
+
+  buttonDiv.appendChild(leftBracket)
+  buttonDiv.appendChild(blogBtn)
+  buttonDiv.appendChild(rightBracket)
+
+
+  blogsDiv.appendChild(title)
+  blogsDiv.appendChild(blog)
+  blogsDiv.appendChild(buttonDiv)
+
+  
+  blogsArea.appendChild(blogsDiv)
+})
+
+
+
+
+//careers area
+
+let {careersData} = config
+let careersArea = document.querySelector('.careersArea')
+
+careersData.forEach(career => {
+
+  
+  //message div
+  let messageDiv = document.createElement('div')
+  messageDiv.classList.add('message')
+  messageDiv.classList.add('nonDisplay')
+  let message = document.createElement('p')
+  message.innerHTML = "Succesfuly sent!"
+  messageDiv.appendChild(message)
+  
+  
+  // list div
+  let listDiv = document.createElement('div')
+  listDiv.classList.add('listDiv')
+  
+  let titleDiv = document.createElement('div')
+  let title = document.createElement('p');
+  title.classList.add('title')
+  title.innerHTML = career.title
+  titleDiv.appendChild(title)
+  let list = document.createElement('div')
+  list.innerHTML = career.list
+
+  let careerButtonDiv = document.createElement('div')
+    let buttonDiv = document.createElement('div')
+    buttonDiv.classList.add('buttonDiv')
+        let buttonLeftBracket = document.createElement('img')
+        buttonLeftBracket.src = "./assets/shared/buttonBracketLeft.svg"
+        buttonLeftBracket.classList.add('buttonLeftBracket')
+
+        let careerButton = document.createElement('button')
+        careerButton.classList.add('careerBtn')
+        careerButton.innerHTML = 'Send resume'
+
+        let buttonRightBracket = document.createElement('img')
+        buttonRightBracket.src = "./assets/shared/buttonBracketRight.svg"
+        buttonRightBracket.classList.add('buttonRightBracket')
+
+        buttonDiv.appendChild(buttonLeftBracket)
+        buttonDiv.appendChild(careerButton)
+        buttonDiv.appendChild(buttonRightBracket)
+
+
+        
+
+    careerButtonDiv.appendChild(buttonDiv)
+    
+
+  listDiv.appendChild(titleDiv)
+  listDiv.appendChild(list)
+  listDiv.appendChild(careerButtonDiv)
+
+  //resume div
+  let resumeDiv = document.createElement('div')
+  resumeDiv.classList.add('resumeDiv')
+  resumeDiv.classList.add('nonDisplay')
+
+        let fileDiv = document.createElement('div')
+        fileDiv.classList.add('fileDiv')
+
+            let label = document.createElement('label')
+            label.classList.add('label')
+
+            let fileInput = document.createElement('input')
+            fileInput.type = 'file'
+            fileInput.classList.add('file')
+            let inputSpan = document.createElement('span')
+              inputSpan.innerHTML = 'Select a file'
+
+              label.appendChild(fileInput)
+              label.appendChild(inputSpan)
+
+              fileDiv.appendChild(label)
+
+        let mailDiv = document.createElement('div')
+        mailDiv.classList.add('mailDiv')
+
+            let mailInput = document.createElement('input')
+            mailInput.classList.add('mailInput')
+            mailInput.placeholder = 'Mail'
+            mailDiv.appendChild(mailInput)
+
+            let buttonParent = document.createElement('div')
+            buttonParent.classList.add('buttonParent')
+
+                let sendButtonDiv = document.createElement('div')
+                sendButtonDiv.classList.add('buttonDiv')
+
+
+                      let buttonLeftBracket1 = document.createElement('img')
+                      buttonLeftBracket1.src = "./assets/shared/buttonBracketLeft.svg"
+                      buttonLeftBracket1.classList.add('buttonLeftBracket')
+              
+                      let sendResumeBtn = document.createElement('button')
+                      sendResumeBtn.classList.add('sendResumeBtn')
+                      sendResumeBtn.innerHTML = 'Send resume'
+              
+                      let buttonRightBracket1 = document.createElement('img')
+                      buttonRightBracket1.src = "./assets/shared/buttonBracketRight.svg"
+                      buttonRightBracket1.classList.add('buttonRightBracket')
+
+                      sendButtonDiv.appendChild(buttonLeftBracket1)
+                      sendButtonDiv.appendChild(sendResumeBtn)
+                      sendButtonDiv.appendChild(buttonRightBracket1)
+
+
+                      ////////
+                      let backBtnDiv = document.createElement('div')
+                      backBtnDiv.classList.add('buttonDiv')
+      
+      
+                            let buttonLeftBracket2 = document.createElement('img')
+                            buttonLeftBracket2.src = "./assets/shared/buttonBracketLeft.svg"
+                            buttonLeftBracket2.classList.add('buttonLeftBracket')
+                    
+                            let backBtn = document.createElement('button')
+                            backBtn.classList.add('backButton')
+                            backBtn.innerHTML = 'back'
+                    
+                            let buttonRightBracket2 = document.createElement('img')
+                            buttonRightBracket2.src = "./assets/shared/buttonBracketRight.svg"
+                            buttonRightBracket2.classList.add('buttonRightBracket')
+      
+                            backBtnDiv.appendChild(buttonLeftBracket2)
+                            backBtnDiv.appendChild(backBtn)
+                            backBtnDiv.appendChild(buttonRightBracket2)
+
+
+
+
+            buttonParent.appendChild(sendButtonDiv)
+            buttonParent.appendChild(backBtnDiv)
+
+  resumeDiv.appendChild(fileDiv)
+  resumeDiv.appendChild(mailDiv)
+  resumeDiv.appendChild(buttonParent)
+  
+  let careerDiv = document.createElement('div')
+  careerDiv.classList.add('careerDiv')
+
+
+
+  careerDiv.appendChild(messageDiv)
+  careerDiv.appendChild(listDiv)
+  careerDiv.appendChild(resumeDiv)
+
+  careersArea.appendChild(careerDiv)
+})
+
+

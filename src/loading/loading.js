@@ -251,30 +251,24 @@ jQuery.event.special.touchstart = {
 /* --------
  for "read more" blogs
 ---------- */
-let blogs = document.querySelectorAll('.blogDiv');
-let buttons = document.querySelectorAll('.blogBtn');
+let blogDiv = document.querySelectorAll('.blogDiv');
 
-buttons.forEach(button =>  {
-  button.addEventListener("click", ({target}) => {
-    let btnValue = target.value
-    
-    button.parentElement.parentElement.classList.toggle("readMore");
+blogDiv.forEach(element => {
+  let blogBtn = element.querySelector('.blogBtn')
+  let dots = element.querySelector('.dots')
 
-      blogs.forEach((blog) => {
-        let blogValue = blog.attributes.value.value;
-          if(blogValue !== btnValue){
-            blog.classList.toggle("nonDisplay")
-          }
-      })
+  blogBtn.addEventListener('click', () => {
+    element.classList.toggle('readMore')
+    dots.classList.toggle('nonDisplay')
 
-    if(button.innerText === "Read more"){
-      button.innerText = "Read less"
-    }else{
-      button.innerText = "Read more"
-    }
+    blogDiv.forEach(blogs => {
+      blogs !== element ? blogs.classList.toggle('nonDisplay') : null
+    })
+
+
+    blogBtn.innerText === "Read more" ? blogBtn.innerText = "Read less" : blogBtn.innerText = "Read more"
   })
 })
-
 
 
 
