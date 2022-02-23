@@ -44,7 +44,7 @@ export let config = {
   blogData: [
     {
       title: 'Lorem ipsum 1',
-      text: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis excepturi perspiciatis laborum, veniam nam earum debitis eius delectus impedit voluptatem. Ratione totam pariatur veritatis quasi officia? Rerum, architecto? Quisquam qui molestiae cupiditate assumenda totam doloribus repudiandae, minima ab`,
+      text: `this shoult be without blogs branch  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis excepturi perspiciatis laborum, veniam nam earum debitis eius delectus impedit voluptatem. Ratione totam pariatur veritatis quasi officia? Rerum, architecto? Quisquam qui molestiae cupiditate assumenda totam doloribus repudiandae, minima ab`,
       moreText: ` Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
       Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
