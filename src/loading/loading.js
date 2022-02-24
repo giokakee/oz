@@ -270,32 +270,6 @@ careerDiv.forEach(element => {
 
   })
 
-  let sendSuccesuly = false
-
-  const sendEmail =  ({data, name, title, mail}) => {
-    Email.send({
-      Host : "smtp.mailtrap.io",
-      Username : "1343361ee70820",
-      Password : "85fb7bb85e2cbb",
-      To : 'naghd15@freeuni.edu.ge',
-      From : mail,
-      Subject : "Ozorix",
-      Body : `<html>
-              <h1>resume for ${title} </h1>
-          </html>`,
-          Attachments : [
-    {
-      name,
-      data
-    }]
-  }).then(msg => {
-    console.log(msg)
-    console.log(msg == 'OK')
-    sendSuccesuly = msg == "OK"
-  })
-  }
-
-
   let data
 
   dragInput.addEventListener('change', (e) => {
