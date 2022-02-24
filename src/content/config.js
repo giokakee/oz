@@ -37,8 +37,8 @@ export let config = {
 
   socialLinks: {
     facebook: "https://www.youtube.com/watch?v=rZQ72SFGYwk",
-    twitter: "#",
-    instagram: "#"
+    twitter: "https://www.twitter.com",
+    instagram: "https://www.instagram.com"
   },
 
   blogData: [
@@ -183,9 +183,7 @@ export let config = {
     emailInit: "info@ozorix.com",
     emailHref: "mailto:info@ozorix.com",
     address: "Address",
-    addressInit: "14b Shalva Nutsubidze St",
-    opening: "Opening Hours",
-    openingInit: "Tuesday through Thursday, <br /> 10AM-2PM, 3PM-7PM</p>"
+    addressInit: "14b Shalva Nutsubidze St"
   },
 
   customersTextData: {

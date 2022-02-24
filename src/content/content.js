@@ -16,9 +16,7 @@ let contactObj = [
   { class: ".contact-address__title", config: "address" },
   { class: ".contact-address__Initials", config: "addressInit" },
   { class: ".contact__email", config: "email" },
-  { class: ".contact-email__initial", config: "emailInit", href: "emailHref" },
-  { class: ".contact__opening", config: "opening" },
-  { class: ".contact-opening__initials", config: "openingInit" },
+  { class: ".contact-email__initial", config: "emailInit", href: "emailHref" }
 ];
 
 contactObj.map(contact => {

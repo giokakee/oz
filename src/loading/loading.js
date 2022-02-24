@@ -312,6 +312,17 @@ careerDiv.forEach(element => {
   })
 
 
+  let data
+
+  dragInput.addEventListener('change', (e) => {
+    let fileReader = new FileReader();
+    fileReader.readAsDataURL(dragInput.files[0])
+     fileReader.addEventListener('load', (file) => {
+        data = fileReader.result
+      })
+  })
+
+
 
   
   //Sending resume
@@ -323,41 +334,49 @@ careerDiv.forEach(element => {
 
 
     
-    if(mail && file.files.length){
-      listDiv.classList.remove("nonDisplay")
-      resumeDiv.classList.toggle("nonDisplay")
+    if(mail && file.files.length && file.files[0].size <= 15000000){
       
-      let userInfo = {
-        title, 
-        mail,
-        file: file.files,
-        value: element.querySelector('.dragInput').value
-      }
-      
-      console.log(userInfo)
+      Email.send({
+        Host : "smtp.mailtrap.io",
+        Username : "1343361ee70820",
+        Password : "85fb7bb85e2cbb",
+        To : 'naghd15@freeuni.edu.ge',
+        From : mail,
+        Subject : "Ozorix",
+        Body : `<html>
+                <h1>resume for ${title} </h1>
+            </html>`,
+            Attachments : [
+      {
+        name: file.files[0].name,
+        data
+      }]
+    }).then(msg => {
+      console.log(msg)
+      if(msg == "OK"){
+        listDiv.classList.remove("nonDisplay")
+        resumeDiv.classList.toggle("nonDisplay")
   
-      dragFileHere.innerHTML = "Drag file here"
-      dragFileHere.style.color = "white"
-      dragInput.value = null
-      fileDiv.style.border = '2px dashed #ffffff'
-      forOpacity.style.opacity = '0'
-      fileDiv.style.backgroundColor = "#131c1b"
-
-     
-     
-      message.classList.remove("nonDisplay")
-      setTimeout(() => {
-        message.classList.add("nonDisplay")
-      }, 3000)
-      element.querySelector('.mailInput').value = ""
-    }else{
-      console.log('here should be error message')
-
+        dragFileHere.innerHTML = "Drag file here"
+        dragFileHere.style.color = "white"
+        dragInput.value = null
+        fileDiv.style.border = '2px dashed #ffffff'
+        forOpacity.style.opacity = '0'
+        fileDiv.style.backgroundColor = "#131c1b"
+  
+        message.classList.remove("nonDisplay")
+        setTimeout(() => {
+          message.classList.add("nonDisplay")
+        }, 3000)
+        element.querySelector('.mailInput').value = ""
+      }else{
+        alert(msg)
+      }
+    })
     }
   })
 
 })
-
 
 
 
