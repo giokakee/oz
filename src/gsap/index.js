@@ -119,18 +119,18 @@ let sectionAnimation = () => {
     /* --------
    blogs animation section
   ---------- */
-  let blogsAnimation = () => {
-    let blogs = gsap.timeline({ defaults: { opacity: 0, ease: "back" } });
+  // let blogsAnimation = () => {
+  //   let blogs = gsap.timeline({ defaults: { opacity: 0, ease: "back" } });
   
-    blogs
-      .from(".glass", {duration: 1.5, x: -700})
-      .from(".glass1", {duration: 1.5, x: 700}, "<")
-      .from(".blogDiv", {duration: 0.1,  stagger: 0.3, y: -500, opacity: 0})
-      .from(".learnToCode", {duration: 3.3, y: 500, opacity:0 , ease: "elastic.out(1, 0.3)"})
+  //   blogs
+  //     .from(".glass", {duration: 1.5, x: -700})
+  //     .from(".glass1", {duration: 1.5, x: 700}, "<")
+  //     .from(".blogDiv", {duration: 0.1,  stagger: 0.3, y: -500, opacity: 0})
+  //     .from(".learnToCode", {duration: 3.3, y: 500, opacity:0 , ease: "elastic.out(1, 0.3)"})
   
-    blogs.pause();
-    return blogs;
-  };
+  //   blogs.pause();
+  //   return blogs;
+  // };
 
 
 
@@ -159,7 +159,7 @@ let sectionAnimation = () => {
     project: projectAnimation(),
     services: servicesAnimation(),
     contact: contactAnimation(),
-    blogs: blogsAnimation(),
+    // blogs: blogsAnimation(),
     careers: careersAnimation()
   };
 };
@@ -200,11 +200,11 @@ let ScrollAnimations = () => {
       .from(".contact-body__left", { duration: 1, x: -500, opacity: 0 })
       .from(".contact-body__right", { duration: 1, x: 500, opacity: 0 }, "<");
 
-    let blogsAnim = gsap.timeline();
+    // let blogsAnim = gsap.timeline();
 
-    blogsAnim
-    .from(".blogs-body__left", { duration: 1, x: -1000,  })
-    .from(".blogs-body__right", { duration: 1, x: 1000,  }, "<", );
+    // blogsAnim
+    // .from(".blogs-body__left", { duration: 1, x: -1000,  })
+    // .from(".blogs-body__right", { duration: 1, x: 1000,  }, "<", );
 
     let careersAnim = gsap.timeline()
 
@@ -218,7 +218,7 @@ let ScrollAnimations = () => {
     projectAnim,
     customersAnim,
     contactAnim,
-    blogsAnim,
+    // blogsAnim,
     careersAnim
   };
 };

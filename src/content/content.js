@@ -17,8 +17,7 @@ let contactObj = [
   { class: ".contact-address__Initials", config: "addressInit" },
   { class: ".contact__email", config: "email" },
   { class: ".contact-email__initial", config: "emailInit", href: "emailHref" },
-  { class: ".contact__opening", config: "opening" },
-  { class: ".contact-opening__initials", config: "openingInit" },
+  { class: ".contact__socialLinks", config: "SocialLinks" }
 ];
 
 contactObj.map(contact => {
@@ -166,66 +165,6 @@ document.querySelector(".instagram").setAttribute("href", config.socialLinks.ins
 
 
 
-
-
-
-//blogs area
-
-let blogsArea = document.querySelector(".blogsArea")
-let {blogData} = config
-
-
-blogData.forEach(blogData => {
-  let blogsDiv = document.createElement('div');
-  blogsDiv.classList.add('blogDiv');
-  
-  let title = document.createElement('p')
-  title.classList.add('title')
-  title.innerHTML = blogData.title
-
-  let blog = document.createElement('p')
-  blog.classList.add('blog')
-  blog.innerHTML= blogData.text
-
-  let dots = document.createElement('span')
-  dots.classList.add('dots')
-  dots.innerHTML = '...'
-  blog.appendChild(dots)
-
-  let moreText = document.createElement('span')
-  moreText.classList.add('moreText')
-  moreText.innerHTML = blogData.moreText
-  blog.appendChild(moreText)
-
-  let buttonDiv = document.createElement('div')
-  buttonDiv.classList.add('buttonDiv')
-
-
-  let leftBracket = document.createElement('img')
-  leftBracket.classList.add('buttonLeftBracket')
-  leftBracket.src = "./assets/shared/buttonBracketLeft.svg"
-
-  let blogBtn = document.createElement('button')
-  blogBtn.classList.add('blogBtn')
-  blogBtn.innerHTML = 'Read more'
-
-  let rightBracket = document.createElement('img')
-  rightBracket.classList.add('buttonRightBracket')
-  rightBracket.src = "./assets/shared/buttonBracketRight.svg"
-
-
-  buttonDiv.appendChild(leftBracket)
-  buttonDiv.appendChild(blogBtn)
-  buttonDiv.appendChild(rightBracket)
-
-
-  blogsDiv.appendChild(title)
-  blogsDiv.appendChild(blog)
-  blogsDiv.appendChild(buttonDiv)
-
-  
-  blogsArea.appendChild(blogsDiv)
-})
 
 
 

@@ -74,8 +74,10 @@
   margin-bottom: 230px;
 }
 
-.contact__column2 {
-  margin-top: 5.5%;
+.social__media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media only screen and (min-width: 700px) and (max-width: 1200px) {

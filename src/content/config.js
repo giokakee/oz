@@ -184,8 +184,7 @@ export let config = {
     emailHref: "mailto:info@ozorix.com",
     address: "Address",
     addressInit: "14b Shalva Nutsubidze St",
-    opening: "Opening Hours",
-    openingInit: "Tuesday through Thursday, <br /> 10AM-2PM, 3PM-7PM</p>"
+    SocialLinks: "Social links",
   },
 
   customersTextData: {

@@ -200,17 +200,9 @@ function handleTouchMove3(evt) {
 
 
 
-// for blogs and careers touchscroll
+// for  careers touchscroll
 
-let blogsArea = document.querySelector('.blogsArea')
 let careersArea = document.querySelector('.careersArea')
-
-blogsArea.addEventListener('touchmove', () => {
-  $.fn.fullpage.setAllowScrolling(false);
-})
-blogsArea.addEventListener('touchend', () =>{
-  $.fn.fullpage.setAllowScrolling(true);
-})
 
 careersArea.addEventListener('touchmove', () => {
   $.fn.fullpage.setAllowScrolling(false);

@@ -22,7 +22,6 @@ function navHover(element, hoverElement) {
 
 navHover(".nav-home", "home-hover");
 navHover(".nav-services", "services-hover");
-navHover(".nav-blogs", "blogs-hover");
 navHover(".nav-careers", "careers-hover");
 navHover(".nav-projects", "projects-hover");
 navHover(".nav-customers", "customers-hover");
@@ -54,7 +53,7 @@ Array.from(document.getElementsByClassName("mnav-close")).forEach(
 /* --------
   restart Scroll animation when user will click on the scroll
  ---------- */
-function navigation(services, projects, customers, contact, aboutUs, blogs, careers) {
+function navigation(services, projects, customers, contact, aboutUs,careers) {
   document.querySelector(services).addEventListener("click", () => {
     scroll.servicesAnim.restart();
   });
@@ -74,13 +73,11 @@ function navigation(services, projects, customers, contact, aboutUs, blogs, care
   document.querySelector(aboutUs).addEventListener("click", () => {
     scroll.aboutUsAnim.restart();
   });
-  document.querySelector(blogs).addEventListener("click", () => {
-    scroll.blogsAnim.restart();
-  });
+
   document.querySelector(careers).addEventListener("click", () => {
     scroll.careersAnim.restart();
   });
 }
 
-navigation(".nav-services", ".nav-projects", ".nav-customers", ".nav-contact", ".nav-aboutUs", ".nav-blogs", ".nav-careers");
-navigation(".navigator--services", ".navigator--projects", ".navigator--customers", ".navigator--contact", ".navigator--aboutUs", ".navigator--blogs", ".navigator--careers");
+navigation(".nav-services", ".nav-projects", ".nav-customers", ".nav-contact", ".nav-aboutUs", ".nav-careers");
+navigation(".navigator--services", ".navigator--projects", ".navigator--customers", ".navigator--contact", ".navigator--aboutUs", ".navigator--careers");
