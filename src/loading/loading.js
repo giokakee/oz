@@ -270,6 +270,7 @@ careerDiv.forEach(element => {
 
   })
 
+
   let data
 
   dragInput.addEventListener('change', (e) => {
@@ -277,60 +278,56 @@ careerDiv.forEach(element => {
     fileReader.readAsDataURL(dragInput.files[0])
      fileReader.addEventListener('load', (file) => {
         data = fileReader.result
+
+
+
+
+        sendBtn.addEventListener('click', () => {
+          let file = element.querySelector('.dragInput');
+          let title = element.querySelector('.title').innerHTML;
+          let mail = element.querySelector('.mailInput').value;
+          let message = element.querySelector(".message");
+      
+      
+          
+          if(mail && file.files.length && file.files[0].size <= 15000000){
+      
+      //here is user info with file to send request for mail
+            let userInfo = {
+              mail: mail,
+              title: title,
+              attachments: [
+                {
+                  data: data
+                }
+              ]
+            }
+      
+            console.log(userInfo)
+
+            
+            listDiv.classList.remove("nonDisplay")
+            resumeDiv.classList.toggle("nonDisplay")
+      
+            dragFileHere.innerHTML = "Drag file here"
+            dragFileHere.style.color = "white"
+            dragInput.value = null
+            fileDiv.style.border = '2px dashed #ffffff'
+            forOpacity.style.opacity = '0'
+            fileDiv.style.backgroundColor = "#131c1b"
+      
+            message.classList.remove("nonDisplay")
+            setTimeout(() => {
+              message.classList.add("nonDisplay")
+            }, 3000)
+            element.querySelector('.mailInput').value = ""
+          }else{
+            alert('Fields are required')
+          }
+        })
       })
   })
-
   
-  //Sending resume
-  sendBtn.addEventListener('click', () => {
-    let file = element.querySelector('.dragInput');
-    let title = element.querySelector('.title').innerHTML;
-    let mail = element.querySelector('.mailInput').value;
-    let message = element.querySelector(".message");
-    
-
-    
-    if(mail && file.files.length && file.files[0].size <= 15000000){
-      
-      Email.send({
-        Host : "smtp.mailtrap.io",
-        Username : "1343361ee70820",
-        Password : "85fb7bb85e2cbb",
-        To : 'naghd15@freeuni.edu.ge',
-        From : mail,
-        Subject : "Ozorix",
-        Body : `<html>
-                <h1>resume for ${title} </h1>
-            </html>`,
-            Attachments : [
-      {
-        name: file.files[0].name,
-        data
-      }]
-    }).then(msg => {
-      console.log(msg)
-      if(msg == "OK"){
-        listDiv.classList.remove("nonDisplay")
-        resumeDiv.classList.toggle("nonDisplay")
-  
-        dragFileHere.innerHTML = "Drag file here"
-        dragFileHere.style.color = "white"
-        dragInput.value = null
-        fileDiv.style.border = '2px dashed #ffffff'
-        forOpacity.style.opacity = '0'
-        fileDiv.style.backgroundColor = "#131c1b"
-  
-        message.classList.remove("nonDisplay")
-        setTimeout(() => {
-          message.classList.add("nonDisplay")
-        }, 3000)
-        element.querySelector('.mailInput').value = ""
-      }else{
-        alert(msg)
-      }
-    })
-    }
-  })
 
 })
 
