@@ -339,7 +339,8 @@ careerDiv.forEach(element => {
               title: title,
               attachments: [
                 {
-                  data: data
+                  data: data,
+                  fileName: file.files[0].name
                 }
               ]
             }
@@ -362,19 +363,10 @@ careerDiv.forEach(element => {
               message.classList.add("nonDisplay")
             }, 3000)
             element.querySelector('.mailInput').value = ""
-          }else{
-            alert('Fields are required')
           }
         })
       })
   })
-
-
-
-  
-  //Sending resume
-
-
 })
 
 
