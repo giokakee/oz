@@ -59,7 +59,7 @@ let leaveSection = [
     direction: "down",
     secIndex: 6,
     secDirection: "up",
-    animation: "blogsAnim",
+    animation: "careersAnim",
     method: "restart",
   },
   {
@@ -67,7 +67,7 @@ let leaveSection = [
     direction: "down",
     secIndex: 5,
     secDirection: "up",
-    animation: "blogsAnim",
+    animation: "careersAnim",
     method: "reverse",
   },
   {
@@ -75,7 +75,7 @@ let leaveSection = [
     direction: "down",
     secIndex: 7,
     secDirection: "up",
-    animation: "careersAnim",
+    animation: "customersAnim",
     method: "restart",
   },
   {
@@ -83,7 +83,7 @@ let leaveSection = [
     direction: "down",
     secIndex: 6,
     secDirection: "up",
-    animation: "careersAnim",
+    animation: "customersAnim",
     method: "reverse",
   },
   {
@@ -91,30 +91,16 @@ let leaveSection = [
     direction: "down",
     secIndex: 8,
     secDirection: "up",
-    animation: "customersAnim",
+    animation: "contactAnim",
     method: "restart",
   }, {
     index: 7,
     direction: "down",
     secIndex: 7,
     secDirection: "up",
-    animation: "customersAnim",
-    method: "reverse",
-  },  {
-    index: 7,
-    direction: "down",
-    secIndex: 9,
-    secDirection: "up",
-    animation: "contactAnim",
-    method: "restart",
-  }, {
-    index: 8,
-    direction: "down",
-    secIndex: 8,
-    secDirection: "up",
     animation: "contactAnim",
     method: "reverse",
-  },
+  }
 ];
 
 const animated = document.querySelector(".loading__logo-right");
@@ -154,7 +140,7 @@ new Swiper(".swiper-mobile__container", {
 // init full page js, and resume animations
 $("#fullPage").fullpage({
   scrollingSpeed: config.scrollSpeed,
-  normalScrollElements: ".aboutUs-body-text, .services-body__right, .swiper-mobile__container, .section__navigation .blogsArea .careersArea",
+  normalScrollElements: ".aboutUs-body-text, .services-body__right, .swiper-mobile__container, .section__navigation  .careersArea",
 
   afterLoad: function (anchorLink, index) {
     let loadedSection = $(this);
@@ -173,15 +159,12 @@ $("#fullPage").fullpage({
           sectAnim.project.resume();
           break;
         case 5:
-          sectAnim.blogs.resume();
-          break;
-        case 6:
           sectAnim.careers.resume();
           break;          
-        case 7:
+        case 6:
           scroll.customersAnim.resume();
           break;
-        case 8:
+        case 7:
           sectAnim.contact.resume();
           break;
       }
@@ -205,7 +188,6 @@ $.fn.fullpage.setAllowScrolling(false);
 document.querySelector(".customers__names");
 let servicesDiv = document.querySelector(".services-body__right");
 let aboutUsDiv = document.querySelector(".aboutUs-body-text");
-let blogsArea = document.querySelector(".blogsArea");
 let careersArea = document.querySelector(".careersArea");
 
 function scrollThing(container) {
@@ -226,7 +208,6 @@ function scrollThing(container) {
 }
 scrollThing(aboutUsDiv);
 scrollThing(servicesDiv);
-scrollThing(blogsArea);
 scrollThing(careersArea);
 
 /* --------
@@ -248,27 +229,6 @@ jQuery.event.special.touchstart = {
 
 
 
-/* --------
- for "read more" blogs
----------- */
-let blogDiv = document.querySelectorAll('.blogDiv');
-
-blogDiv.forEach(element => {
-  let blogBtn = element.querySelector('.blogBtn')
-  let dots = element.querySelector('.dots')
-
-  blogBtn.addEventListener('click', () => {
-    element.classList.toggle('readMore')
-    dots.classList.toggle('nonDisplay')
-
-    blogDiv.forEach(blogs => {
-      blogs !== element ? blogs.classList.toggle('nonDisplay') : null
-    })
-
-
-    blogBtn.innerText === "Read more" ? blogBtn.innerText = "Read less" : blogBtn.innerText = "Read more"
-  })
-})
 
 
 

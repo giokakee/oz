@@ -26,10 +26,6 @@ export let config = {
     titleSpeed: 0.02,
     delay: 0,
   },
-  blogs: {
-    titleSpeed: 0.02,
-    delay: 0,
-  },
   careers: {
     titleSpeed: 0.02,
     delay: 0,
@@ -40,106 +36,6 @@ export let config = {
     twitter: "#",
     instagram: "#"
   },
-
-  blogData: [
-    {
-      title: 'Lorem ipsum 1',
-      text: `this shoult be without blogs branch  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis excepturi perspiciatis laborum, veniam nam earum debitis eius delectus impedit voluptatem. Ratione totam pariatur veritatis quasi officia? Rerum, architecto? Quisquam qui molestiae cupiditate assumenda totam doloribus repudiandae, minima ab`,
-      moreText: ` Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
-      nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
-      tristique senectus et netus et. Duis convallis convallis tellus id 
-      interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
-      non arcu. Lacus vestibulum sed arcu`
-    },
-    {
-      title: 'Lorem ipsum 2',
-      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
-             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
-             tristique senectus et netus et. Duis convallis convallis tellus id 
-             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
-             non arcu. Lacus vestibulum sed arcu`,
-      moreText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
-             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
-             tristique senectus et netus et. Duis convallis convallis tellus id 
-             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
-             non arcu. Lacus vestibulum sed arcu`
-    },
-    {
-      title: 'Lorem ipsum 3',
-      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
-             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
-             tristique senectus et netus et. Duis convallis convallis tellus id 
-             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
-             non arcu. Lacus vestibulum sed arcu`,
-      moreText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
-             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
-             tristique senectus et netus et. Duis convallis convallis tellus id 
-             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
-             non arcu. Lacus vestibulum sed arcu`
-    },
-    {
-      title: 'Lorem ipsum4',
-      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
-             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
-             tristique senectus et netus et. Duis convallis convallis tellus id 
-             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
-             non arcu. Lacus vestibulum sed arcu`,
-      moreText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
-             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
-             tristique senectus et netus et. Duis convallis convallis tellus id 
-             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
-             non arcu. Lacus vestibulum sed arcu`
-    },
-    {
-      title: 'Lorem ipsum',
-      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
-             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
-             tristique senectus et netus et. Duis convallis convallis tellus id 
-             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
-             non arcu. Lacus vestibulum sed arcu`,
-      moreText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
-             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
-             tristique senectus et netus et. Duis convallis convallis tellus id 
-             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
-             non arcu. Lacus vestibulum sed arcu`
-    },
-    {
-      title: 'Lorem ipsum',
-      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
-             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
-             tristique senectus et netus et. Duis convallis convallis tellus id 
-             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
-             non arcu. Lacus vestibulum sed arcu`,
-      moreText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-             Vitae suscipit tellus mauris a diam maecenas sed enim. Malesuada 
-             nunc vel risus commodo viverra maecenas accumsan. Habitant morbi 
-             tristique senectus et netus et. Duis convallis convallis tellus id 
-             interdum velit. Enim nec dui nunc mattis. Porttitor eget dolor morbi 
-             non arcu. Lacus vestibulum sed arcu`
-    }
-  ],
-
   careersData: [
     {
       title: "UX Designer react",
